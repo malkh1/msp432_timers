@@ -1,6 +1,6 @@
 Dependencies for Project 'Timer_project', Target 'Target 1': (DO NOT MODIFY !)
 CompilerVersion: 6160000::V6.16::ARMCLANG
-F (.\main.c)(0x618AD6E3)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O1 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I./RTE/_Target_1-IC:/Users/Mohammad/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-IC:/Users/Mohammad/AppData/Local/Arm/Packs/TexasInstruments/MSP432P4xx_DFP/3.2.6/Device/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_ -D__MSP432P4111__-o ./objects/main.o -MD)
+F (.\main.c)(0x61A147E7)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O1 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I./RTE/_Target_1-IC:/Users/Mohammad/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-IC:/Users/Mohammad/AppData/Local/Arm/Packs/TexasInstruments/MSP432P4xx_DFP/3.2.6/Device/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_ -D__MSP432P4111__-o ./objects/main.o -MD)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6035B090)
 I (C:\Users\Mohammad\AppData\Local\Arm\Packs\TexasInstruments\MSP432P4xx_DFP\3.2.6\Device\Include\msp.h)(0x5B69EB34)
 I (C:\Users\Mohammad\AppData\Local\Arm\Packs\TexasInstruments\MSP432P4xx_DFP\3.2.6\Device\Include\msp432p4111.h)(0x5B69EB34)
@@ -11,37 +11,6 @@ I (C:\Users\Mohammad\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\
 I (C:\Users\Mohammad\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armclang.h)(0x60D491A2)
 I (C:\Users\Mohammad\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\mpu_armv7.h)(0x60D491A2)
 I (C:\Users\Mohammad\AppData\Local\Arm\Packs\TexasInstruments\MSP432P4xx_DFP\3.2.6\Device\Include\system_msp432p4111.h)(0x5B69EB36)
-I (C:\Users\Mohammad\OneDrive - Carleton University\Desktop\code + school\YEAR 3\SYSC3310\MSP432P4xx\driverlib.h)(0x5B69EB3C)
-I (C:\Users\Mohammad\OneDrive - Carleton University\Desktop\code + school\YEAR 3\SYSC3310\MSP432P4xx\adc14.h)(0x5B69EB3A)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x6035B08A)
-I (C:\Users\Mohammad\OneDrive - Carleton University\Desktop\code + school\YEAR 3\SYSC3310\MSP432P4xx\aes256.h)(0x5B69EB3A)
-I (C:\Users\Mohammad\OneDrive - Carleton University\Desktop\code + school\YEAR 3\SYSC3310\MSP432P4xx\comp_e.h)(0x5B69EB3A)
-I (C:\Users\Mohammad\OneDrive - Carleton University\Desktop\code + school\YEAR 3\SYSC3310\MSP432P4xx\cpu.h)(0x5B69EB3A)
-I (C:\Users\Mohammad\OneDrive - Carleton University\Desktop\code + school\YEAR 3\SYSC3310\MSP432P4xx\crc32.h)(0x5B69EB3A)
-I (C:\Users\Mohammad\OneDrive - Carleton University\Desktop\code + school\YEAR 3\SYSC3310\MSP432P4xx\cs.h)(0x5B69EB3C)
-I (C:\Users\Mohammad\OneDrive - Carleton University\Desktop\code + school\YEAR 3\SYSC3310\MSP432P4xx\dma.h)(0x5B69EB3C)
-I (C:\Users\Mohammad\OneDrive - Carleton University\Desktop\code + school\YEAR 3\SYSC3310\MSP432P4xx\eusci.h)(0x5B69EB3C)
-I (C:\Users\Mohammad\OneDrive - Carleton University\Desktop\code + school\YEAR 3\SYSC3310\MSP432P4xx\flash.h)(0x5B69EB3C)
-I (C:\Users\Mohammad\OneDrive - Carleton University\Desktop\code + school\YEAR 3\SYSC3310\MSP432P4xx\fpu.h)(0x5B69EB3C)
-I (C:\Users\Mohammad\OneDrive - Carleton University\Desktop\code + school\YEAR 3\SYSC3310\MSP432P4xx\gpio.h)(0x5B69EB3C)
-I (C:\Users\Mohammad\OneDrive - Carleton University\Desktop\code + school\YEAR 3\SYSC3310\MSP432P4xx\i2c.h)(0x5B69EB3C)
-I (C:\Users\Mohammad\OneDrive - Carleton University\Desktop\code + school\YEAR 3\SYSC3310\MSP432P4xx\interrupt.h)(0x5B69EB3E)
-I (C:\Users\Mohammad\OneDrive - Carleton University\Desktop\code + school\YEAR 3\SYSC3310\MSP432P4xx\mpu.h)(0x5B69EB3E)
-I (C:\Users\Mohammad\OneDrive - Carleton University\Desktop\code + school\YEAR 3\SYSC3310\MSP432P4xx\pcm.h)(0x5B69EB3E)
-I (C:\Users\Mohammad\OneDrive - Carleton University\Desktop\code + school\YEAR 3\SYSC3310\MSP432P4xx\pmap.h)(0x5B69EB3E)
-I (C:\Users\Mohammad\OneDrive - Carleton University\Desktop\code + school\YEAR 3\SYSC3310\MSP432P4xx\pss.h)(0x5B69EB3E)
-I (C:\Users\Mohammad\OneDrive - Carleton University\Desktop\code + school\YEAR 3\SYSC3310\MSP432P4xx\ref_a.h)(0x5B69EB3E)
-I (C:\Users\Mohammad\OneDrive - Carleton University\Desktop\code + school\YEAR 3\SYSC3310\MSP432P4xx\reset.h)(0x5B69EB40)
-I (C:\Users\Mohammad\OneDrive - Carleton University\Desktop\code + school\YEAR 3\SYSC3310\MSP432P4xx\rom.h)(0x5B69EB40)
-I (C:\Users\Mohammad\OneDrive - Carleton University\Desktop\code + school\YEAR 3\SYSC3310\MSP432P4xx\rom_map.h)(0x5B69EB40)
-I (C:\Users\Mohammad\OneDrive - Carleton University\Desktop\code + school\YEAR 3\SYSC3310\MSP432P4xx\rtc_c.h)(0x5B69EB40)
-I (C:\Users\Mohammad\OneDrive - Carleton University\Desktop\code + school\YEAR 3\SYSC3310\MSP432P4xx\spi.h)(0x5B69EB40)
-I (C:\Users\Mohammad\OneDrive - Carleton University\Desktop\code + school\YEAR 3\SYSC3310\MSP432P4xx\sysctl.h)(0x5B69EB40)
-I (C:\Users\Mohammad\OneDrive - Carleton University\Desktop\code + school\YEAR 3\SYSC3310\MSP432P4xx\systick.h)(0x5B69EB40)
-I (C:\Users\Mohammad\OneDrive - Carleton University\Desktop\code + school\YEAR 3\SYSC3310\MSP432P4xx\timer32.h)(0x5B69EB40)
-I (C:\Users\Mohammad\OneDrive - Carleton University\Desktop\code + school\YEAR 3\SYSC3310\MSP432P4xx\timer_a.h)(0x5B69EB40)
-I (C:\Users\Mohammad\OneDrive - Carleton University\Desktop\code + school\YEAR 3\SYSC3310\MSP432P4xx\uart.h)(0x5B69EB42)
-I (C:\Users\Mohammad\OneDrive - Carleton University\Desktop\code + school\YEAR 3\SYSC3310\MSP432P4xx\wdt_a.h)(0x5B69EB42)
 F (RTE\Device\MSP432P4111\startup_msp432p4111_uvision.s)(0x5A5CB518)(--target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -masm=auto -c-gdwarf-4 -Wa,armasm,--pd,"__EVAL SETA 1"-I./RTE/_Target_1-IC:/Users/Mohammad/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-IC:/Users/Mohammad/AppData/Local/Arm/Packs/TexasInstruments/MSP432P4xx_DFP/3.2.6/Device/Include-Wa,armasm,--pd,"__UVISION_VERSION SETA 536" -Wa,armasm,--pd,"_RTE_ SETA 1" -Wa,armasm,--pd,"_RTE_ SETA 1" -Wa,armasm,--pd,"__MSP432P4111__ SETA 1"-o ./objects/startup_msp432p4111_uvision.o)
 F (RTE\Device\MSP432P4111\system_msp432p4111.c)(0x5B69EB38)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O1 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I./RTE/_Target_1-IC:/Users/Mohammad/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-IC:/Users/Mohammad/AppData/Local/Arm/Packs/TexasInstruments/MSP432P4xx_DFP/3.2.6/Device/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_ -D__MSP432P4111__-o ./objects/system_msp432p4111.o -MD)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6035B090)
