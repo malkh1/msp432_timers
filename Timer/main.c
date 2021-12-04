@@ -3,6 +3,7 @@
 void TA0_N_IRQHandler(void);
 void T32_INT1_IRQHandler(void);
 void PORT1_IRQHandler(void);
+static uint8_t interruptSource = 0x00;
 int main(void)
 {
 	WDT_A->CTL = WDT_A_CTL_HOLD | WDT_A_CTL_PW;
@@ -27,12 +28,13 @@ int main(void)
 	P1->IE   |= BIT1;
 	P1->IE   |= BIT4;
 	
-	//xxxx xx01 0010 0010
-	//01-32768hz clk. 00-divby1. 01-continuous mode.00- do it. 1 int enable. 0 clear ifg
-	//TIMER_A0->CTL = 0x0122; //-> 0000 0001 0010 0010
+	//xxxx xx01 xx01 xx10  01- ACLK = 32768Hz. 01-up mode. 1-interrupt enable. 0-cleared ifg
+	TIMER_A0->CTL |= BIT8;
+	TIMER_A0->CTL |= BIT1;
+	TIMER_A0->CTL &= ~(BIT5 | BIT4);
+	TIMER_A0->CTL &= ~BIT0;
+	TIMER_A0->CCR[0] = 0x7FFF; //32767
 
-	//LIMIT*/
-	//TIMER_A0->CCR[0] = 0xFFFF;
 	NVIC_ClearPendingIRQ(TA0_N_IRQn);
 	NVIC_SetPriority(TA0_N_IRQn, 2);
 	NVIC_EnableIRQ(TA0_N_IRQn);
@@ -42,16 +44,16 @@ int main(void)
 	
   
 	//0 = WRAPPING MODE. 1 = ONE-SHOT 
-	TIMER32_1->CONTROL |= (uint8_t)BIT0;
+	TIMER32_1->CONTROL |= BIT0;
 	//1 = 32-BIT COUNTER. 0 = 16-BIT COUNTER
-	TIMER32_1->CONTROL |= (uint8_t) BIT1;
+	TIMER32_1->CONTROL |=  BIT1;
 	//PRESCALE/CLOCK DIVIDER. 00b = / BY 1. 01b = / BY 16. 10b = / BY 256
-	TIMER32_1->CONTROL |= (uint8_t) BIT2;
+	TIMER32_1->CONTROL |=  BIT2;
 	TIMER32_1->CONTROL &= (uint8_t)~BIT3;
 	//1 = TIMER32 INTERRUPT ENABLED. 0 = DISABLED
-	TIMER32_1->CONTROL |= (uint8_t) BIT5;
+	TIMER32_1->CONTROL |=  BIT5;
 	//0 = FREE RUNNING MODE. 1 = PERIODIC MODE
-	TIMER32_1->CONTROL |= (uint8_t) BIT6;
+	TIMER32_1->CONTROL |=  BIT6;
 	//1 = TIMER32 ENABLED. 0 = TIMER32 DISABLED
 	TIMER32_1->CONTROL &= (uint8_t) ~BIT7;
 	//COUNT DOWN FROM LOAD VALUE. 3MHZ / 16 = 187500 OR 1 SECOND. 675,000,000 is 1hour
@@ -74,19 +76,21 @@ int main(void)
 
 }
 void PORT1_IRQHandler(void){
-	if((P1->IFG & BIT1) != 0){
+	interruptSource = P1->IFG;
+	P1->IFG &= ~BIT1;
+  P1->IFG &= ~BIT4;
+	if((interruptSource & BIT1) != 0){
 		TIMER32_1->CONTROL |= (uint8_t) BIT7;
 		TIMER32_1->LOAD = 675000000;
 		TIMER32_1->INTCLR = 0x0;
 		P1->OUT  &= (uint8_t)~BIT0;
 	}
-	else if((P1->IFG & BIT4) != 0)
+	else if((interruptSource& BIT4) != 0)
 	{
-		TIMER_A0->CTL = 0x0122;
+		TIMER_A0->CTL |= BIT4;
 		P2->OUT  &= (uint8_t)~BIT0; 
 	}
-		P1->IFG &= ~BIT1;
-	  P1->IFG &= ~BIT4;
+
 }
 void T32_INT1_IRQHandler(void){
 	TIMER32_1->INTCLR = 0x0;
@@ -95,14 +99,15 @@ void T32_INT1_IRQHandler(void){
 }
 void TA0_N_IRQHandler(void)
 {
+	TIMER_A0->CTL &= ~BIT0;
 	static uint8_t counter = 0;
 	++counter;
 	if(counter == 240){
 		P2->OUT  |= (uint8_t)BIT0; 
 		counter = 0;
-		TIMER_A0->CTL = 0x0000;
+		TIMER_A0->CTL &= ~BIT4;
 	}
-	TIMER_A0->CTL &= ~BIT0;
+	
 }
 
 

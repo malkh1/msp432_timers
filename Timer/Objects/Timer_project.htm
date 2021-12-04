@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Objects\Timer_project.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\Timer_project.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6160001: Last Updated: Tue Nov  9 15:15:51 2021
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6160001: Last Updated: Fri Nov 26 15:47:50 2021
 <BR><P>
 <H3>Maximum Stack Usage =          8 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -448,7 +448,9 @@ Global Symbols
 
 <P><STRONG><a name="[75]"></a>__semihosting_library_function</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, indicate_semi.o(.text), UNUSED)
 
-<P><STRONG><a name="[2d]"></a>PORT1_IRQHandler</STRONG> (Thumb, 106 bytes, Stack size 0 bytes, main.o(.text.PORT1_IRQHandler))
+<P><STRONG><a name="[2d]"></a>PORT1_IRQHandler</STRONG> (Thumb, 124 bytes, Stack size 4 bytes, main.o(.text.PORT1_IRQHandler))
+<BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = PORT1_IRQHandler
+</UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_msp432p4111_uvision.o(RESET)
 </UL>
 <P><STRONG><a name="[34]"></a>SystemInit</STRONG> (Thumb, 126 bytes, Stack size 0 bytes, system_msp432p4111.o(.text.SystemInit))
@@ -457,10 +459,10 @@ Global Symbols
 <P><STRONG><a name="[23]"></a>T32_INT1_IRQHandler</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, main.o(.text.T32_INT1_IRQHandler))
 <BR>[Address Reference Count : 1]<UL><LI> startup_msp432p4111_uvision.o(RESET)
 </UL>
-<P><STRONG><a name="[13]"></a>TA0_N_IRQHandler</STRONG> (Thumb, 60 bytes, Stack size 0 bytes, main.o(.text.TA0_N_IRQHandler))
+<P><STRONG><a name="[13]"></a>TA0_N_IRQHandler</STRONG> (Thumb, 64 bytes, Stack size 0 bytes, main.o(.text.TA0_N_IRQHandler))
 <BR>[Address Reference Count : 1]<UL><LI> startup_msp432p4111_uvision.o(RESET)
 </UL>
-<P><STRONG><a name="[41]"></a>main</STRONG> (Thumb, 316 bytes, Stack size 0 bytes, main.o(.text.main))
+<P><STRONG><a name="[41]"></a>main</STRONG> (Thumb, 364 bytes, Stack size 0 bytes, main.o(.text.main))
 <BR><BR>[Calls]<UL><LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__NVIC_SetPriority
 <LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__NVIC_EnableIRQ
 <LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__NVIC_ClearPendingIRQ
